@@ -1,0 +1,161 @@
+@import 'def.scss';
+@import 'fonts.scss';
+
+button > a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	width: inherit;
+}
+
+.icons{
+	@include flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	align-self: center;
+}
+
+ main{
+	display: $fx;
+	width: 90%;
+	align-self: center;
+	justify-content: center;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.cell {
+	position: relative;
+	
+	width: $imgw;	
+	height: 460px;
+	margin-top: 100px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 9px 0;
+
+	background-color: white;
+
+	overflow: hidden;
+}
+
+.cell > span{
+	font-size: 22px;
+}
+
+.tourImg img{
+	width: 100%;
+	height: $imgw / 1.35;
+	border-radius: 10px 10px 0 0;
+}
+
+h2, span{
+	padding-left: 5px;
+}
+
+.time, .spec_time{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: 7%;
+}
+
+.spec_time{
+	margin-top: 2% !important;
+}
+
+.time > span , .spec_time > span{
+	font-size: 20px;
+	font-family: 'Inter', sans-serif;
+}
+
+span > img{
+	width: 20px;
+}
+
+
+@media (max-width: 840px){
+	.cell{
+		width: $imgw + 100px;
+		height: 485px;
+	}
+}
+
+@media (max-width: 524px) {
+	.cell{
+		width: 100%;
+		height: 100% !important;
+	}
+	.time{
+		margin: 2% 0 50px 0;
+	}
+	.tourImg img{
+		width: 100%;
+		height: 100%;
+	}
+	button{
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+}
+
+
+button{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	width: $imgw / 2;
+	height: $imgw / 15;
+	margin: 0px 10px 10px 0;
+
+	font-size: 16px;
+
+	background-color: #FFAC33;
+	transition: 0.4s linear;
+	border-radius: 5px;
+	border: 0;
+
+	color: black;
+	transition: 0.4s linear;
+
+	box-shadow: 2px 2px 12px 1px black;
+}
+
+button:hover{
+	background-color: #9d5f03;
+	color: white;
+}
+
+
+button{
+	cursor: pointer;
+}
+
+span{
+	display: block;
+}
+
+.special{
+	color: #FFAC33;
+}
+
+.cell:hover{
+	box-shadow: red;
+}
+
+.cell > a > img{
+	transition: 0.4s;
+	display: block;
+	max-height: 100%;
+}
+
+.cell > a > img:hover{
+	box-shadow: 3px 3px 4px 0px rgb(194, 194, 194);
+	transform: scale(1.03);
+}

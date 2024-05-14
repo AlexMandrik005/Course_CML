@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="keywords" content="Туристическое агентство">
+
+        <title>Альпы</title>
+        <link rel="stylesheet" href="../header.css" media="screen">
+        <link rel="stylesheet" href="../footer.css" media="screen">
+        <link rel="stylesheet" href="style.css" media="screen">
+
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="menu">
+                <div class="logo">
+                    <img src="../svg/sun1.svg" id="logo" alt="logo">
+                    <div class="companyName">
+                        Отдых мечты
+                        <p class="firstfirstP"> +375 (29) 123-45-67 </p>
+                        <p class="firstP"> +375 (29) 555-44-33 </p>
+                    </div>
+                </div>
+         
+                <div class="links">
+                    <a href="../index.html"> Главная </a>
+                    <a href="../tours.html"> Туры </a>
+                    <a href="../contact.html"> Связь </a>
+                    <a href="../index.html#rews"> Отзывы </a>
+                </div>
+        
+                <div class="menu1">
+                  <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                  <label for="burger-checkbox" class="burger"></label>
+                  <ul class="menu-list">
+                      <li><a href="../index.html" class="menu-item">Главная</a><li>
+                      <li><a href="../tours.html" class="menu-item">Туры</a><li>
+                      <li><a href="../contact.html" class="menu-item">Связь</a><li>
+                      <li><a href="../index.html#rews" class="menu-item">Отзывы</a><li>
+                  </ul>
+              </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="tour">
+
+                <div class="image"> <img src="../tours/Foto/alp.jpg" alt="alps"> </div>
+
+                <div class="info">
+                    <h1> Ближайшая дата: </h1>
+                    <p class="date"> </p>                   
+
+                    <h1> Город: </h1>
+                    <p class="city"> </p>
+
+                    <h1> Отель: </h1>
+                    <p class="hotel"></p>
+
+                    <h1> Описание: </h1> 
+                    <p class="desc"> </p>
+                </div>
+            </div>
+            <br><br>
+            
+        <div class="formalign">
+            <div  id="section">
+                <div class="square"></div>
+                <br>
+                <h2> Дополнительные предложения <br> от нашей компании </h2>
+                <div class="dlc">
+                    Базовая стоимость
+                    <span class="price1">   
+                        2445
+                    </span>
+                    BYN
+                </div>
+
+                <div class="dlc">
+                    Аренда лыжного снаряжения
+                    <span class="price">   
+                        60
+                    </span>
+                    €   
+                    <input class="include" type="checkbox" onclick="addition()">  
+                </div>
+
+                <div class="dlc">
+                    Дегустация сыров Церматта
+                    <span class="price">   
+                        40
+                    </span>
+                    €
+                    <input class="include" type="checkbox"  onclick="addition()">  
+                </div>
+
+                <div class="dlc">
+                    Дегустация шоколада
+                    <span class="price">   
+                        35
+                    </span>
+                    €
+                    <input class="include" type="checkbox" onclick="addition()">  
+                </div>
+                <br>
+                <h2> Итого: </h2> 
+                <div class="result"> 
+                    Расчетная стоимость = <span class="byn">  </span> BYN + <span class="euro"> </span> €
+                </div>
+            </div>
+
+            <div class="formimg">
+                <div class="myform">
+                    <h2>У Вас появились вопросы? <br> Мы с радостью ответим Вам!</h2>
+                    <form id="myForm">
+                        <label for="fullName">ФИО:</label><br>
+                        <input type="text" id="fullName" name="fullName" required><br>
+                        
+                        <label for="phoneNumber">Номер телефона:</label><br>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="\+375[0-9]{9}" title="Введите номер телефона в формате +375XXXXXXXXX"><br>
+                        
+                        <label for="comment">Вопрос:</label><br>
+                        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                        
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+                <div class="img_down">
+                <img src="Foto/img_tour.png">
+                </div>
+            </div>
+        </div>
+    </main>
+    </head>
+    <footer>
+            <span class = "footer">
+                <p> Свяжитесь с нами, чтобы получить дополнительную информацию и заказать услуги по помощи в оформлении документов для вашего следующего путешествия:</p>
+                <p>Телефон: +375 (29) 321-22-19 </p>
+            <p>Адрес: г. Минск, ул. Свердлова, 13</p>
+            </span>
+      </footer>
+        <script src="../js/tour.js"></script>
+        <script src="../js/price.js"></script>
+        <script src="../js/form.js"></script>
+        <script src="js/button.js"> </script>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: #F1F5DE;
+  }
+  
+  header{
+    height: 100px;
+    background-color: #01C294;
+    color:white; /*Цвет названия сайта*/
+  }
+
+  .links > a{
+    text-decoration: none;
+    width: 100%;
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    transition: 0.5s;
+  }
+
+  .links > a:hover{
+    background-color: #FFA559;
+  }
+  .links{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 280px;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+
+
+  .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+
+
+  #logo{
+    height: 95px;
+  }
+
+  .companyName{
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    font-size: 38px;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .companyName > p{ /* Номреа под названием*/
+    font-size: 13px;
+    color: rgb(250, 247, 247);
+  }
+
+  .firstfirstP{ /* Номер под названием*/
+    margin-top: 6px;
+    margin-left: 25px;
+  }
+.firstP{ /* Номер под названием*/
+  margin-left: 25px;
+}
+
+/* Скрыть бургер меню по умолчанию */
+.menu1 {
+  display: none;
+}
+
+/* Отображение меню только на мобильных устройствах */
+
+
+.burger-checkbox {
+  position: relative;
+  visibility: hidden;
+}
+.burger {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: transparent;
+  right: 35px;
+  top: 35px;
+  width: 40px;
+  height: 26px;
+}
+.burger::before,
+.burger::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #f7f7f7;
+}
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #f7f7f7;
+  transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+  bottom: 0;
+  transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0,0,0,0);
+  transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+  transition: bottom .3s, transform .3s .15s;
+}
+.menu-list {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  padding: 42px 0;
+  margin: 0;
+  background: orange;
+  z-index: 1;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: .3s;
+  width: 200px;
+}
+.menu-item {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background: rgba(255,255,255,.2)
+}
+.burger-checkbox:checked ~ .menu-list {
+  transform: translateX(0);
+}
+@media screen and (max-width: 768px) {
+  .menu, .links{
+    flex-direction: column;
+    width: 90%;
+  }
+  .companyName{
+    font-size: 34px;
+    margin-top: 15px;
+
+  }
+  .firstfirstP{ /* Номер под названием*/
+    margin-top: 0px;
+    margin-left: 25px;
+  }
+.firstP{ /* Номер под названием*/
+  margin-left: 25px;
+}
+  .menu1 {
+      display: block;
+  }
+  .links > a {
+    display: none;
+}
+.burger{
+  display: block;
+}
+}
